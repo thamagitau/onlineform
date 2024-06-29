@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;}
+
+.container {
+    height: 100vh;
+    background: #f53207;
+    color: #340707;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.card {
+    width: 350px;
+    height: 550px;
+    box-shadow: 0 0 20px #16010142;
+    border-radius: 50px;}
+    
+.inner-card {
+    height: 100%;}
+    
+.card-front, .card-back {
+    position: absolute;
+    height: 100%;
+    padding: 50px;
+    background: #931c02;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    border-radius: 50px;}
+    
+.card-back {
+    transform: rotateY(180deg);}
+    
+.card h2 {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;}   
+    
+.input-box {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #5e0b0b;
+    margin: 6px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;}    
+
+::placeholder {
+    color: #fff;
+    font-size: 12px;}  
+
+button {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 25px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;}
+    
+.submit-btn {
+    position: relative;}
+    
+.submit-btn::after {
+        content: '\27a4';
+        color: #333;
+        line-height: 32px;
+        font-size: 17px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        right: -1px;
+        top: -1px;}
