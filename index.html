@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="card">
-            <div class="inner-card">
+            <div class="inner-card" id="card">
                 <div class="card-front">
                     <h2>Login</h2>
 
@@ -22,7 +22,7 @@
 
                         <input type="checkbox"> <span>Remember Me</span>
 
-                        <button type="button" class="btn">I am new here.</button>
+                        <button type="button" class="btn" onclick="openLogin()">I am new here.</button>
 
                         <a href="">Forgot Password</a>
                 </div>
@@ -34,19 +34,31 @@
                             <input type="email" class="input-box" placeholder="Email" required>
                             <input type="number" class="input-box" placeholder="Phone Number" required>
                             <input type="password" class="input-box" placeholder="Password" required>
+
                             <input type="date" class="input-box" placeholder="Date-of-birth" required>
 
                             <button type="submit" class="submit-btn">Submit</button>
 
                         <input type="checkbox"> <span>Remember Me</span>
 
-                        <button type="button" class="btn">I have an account.</button>
+                        <button type="button" class="btn" onclick="openRegister()">I have an account.</button>
 
                         <a href="">Forgot Password</a>
                         </form>
                     </div>
             </div>
-        </div>
+        </div> 
     </div>
+    <script>
+        var card = document.getElementById("card");
+
+        function openLogin() {
+            card.style.transform = "rotateY(-180deg)"
+        }
+
+        function openRegister() {
+            card.style.transform = "rotateY(0deg)"
+        }
+    </script>
 </body>
 </html>
